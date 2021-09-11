@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define k = Character("Kam")
 
 
 # The game starts here.
@@ -14,20 +14,49 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene hovership
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show doodle_kam_transparent_bg
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    k "Hi I'm Kam and this is a mockup."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    k "{i}mockingly{/i} ...Stick em up!"
 
-    # This ends the game.
+    show doodle_kam_transparent_bg:
+        xalign 0.5
+        linear 0.5 xpos 0.85
 
-    return
+    menu:
+
+        "{i}...shit...{/i}"
+
+        "{i}(Surrender your valuables){/i}":
+
+            jump surrender
+
+        "{b}{i}(Fight!){/i}{/b}":
+
+            jump lose
+
+
+    label surrender:
+
+        k "Thank you for your donation to my clothing startup!"
+
+        scene black
+
+        return
+
+    label lose:
+
+        k "You're going to regret this!"
+
+        scene black
+
+        return
