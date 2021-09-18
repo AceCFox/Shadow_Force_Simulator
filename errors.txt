@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 33: expected 'comma or end of line' not found.
-    with Move
-    ^
+File "game/script.rpy", line 111: expecting name after dot.
+    xpos0.75
+          ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Fri Sep 10 20:57:20 2021
+Sat Sep 18 12:45:15 2021
