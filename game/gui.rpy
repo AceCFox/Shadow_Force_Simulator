@@ -23,51 +23,51 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = u'#9c40f7'
+define gui.accent_color = u'#9B06F6'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = u'#888888'
+define gui.idle_color = u'#aaaaaa'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = u'#aaaaaa'
+define gui.idle_small_color = u'#888888'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = u'#7826c9'
+define gui.hover_color = u'#000000'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = u'#ffffff'
+define gui.selected_color = u'#555555'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = u'#8888887f'
+define gui.insensitive_color = u'#aaaaaa7f'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
-define gui.muted_color = u'#3d1466'
-define gui.hover_muted_color = u'#5b1e99'
+define gui.muted_color = u'#666666'
+define gui.hover_muted_color = u'#999999'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = u'#ffffff'
-define gui.interface_text_color = u'#ffffff'
+define gui.text_color = u'#404040'
+define gui.interface_text_color = u'#404040'
 
 
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "rachel-font2.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "rachel-font2.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "rachel-font2.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 22
+define gui.text_size = 26
 
 ## The size of character names.
-define gui.name_text_size = 30
+define gui.name_text_size = 36
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 22
@@ -76,10 +76,10 @@ define gui.interface_text_size = 22
 define gui.label_text_size = 24
 
 ## The size of text on the notify screen.
-define gui.notify_text_size = 16
+define gui.notify_text_size = 20
 
 ## The size of the game's title.
-define gui.title_text_size = 50
+define gui.title_text_size = 60
 
 
 ## Main and Game Menus #########################################################
@@ -99,7 +99,7 @@ define gui.textbox_height = 185
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
-define gui.textbox_yalign = 1.0
+define gui.textbox_yalign = 0.95
 
 
 ## The placement of the speaking character's name, relative to the textbox.
@@ -209,7 +209,7 @@ define gui.choice_button_borders = Borders(100, 5, 100, 5)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = "#cccccc"
+define gui.choice_button_text_idle_color = "#493D3D"
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = "#444444"
 
