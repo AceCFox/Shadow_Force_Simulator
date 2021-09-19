@@ -3,12 +3,12 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define k = Character("Kam")
+define k = Character("Kam", who_bold=True)
 define unknown = Character("???")
-define dr = Character ("Dr. Iliac", color="#7d4900")
-define ol = Character ("Oliver", color = "#3e702f")
-define o = Character ("Onyx", color = "#2b2b2a")
-define s = Character ("Shadow Master", color = "#a64788")
+define dr = Character ("Dr. Iliac", color="#4536a3", who_bold=True)
+define ol = Character ("Oliver", color = "#3e702f", who_bold=True)
+define o = Character ("Onyx", color = "#2b2b2a", who_bold=True)
+define s = Character ("Shadow Master", color = "#a64788", who_bold=True)
 
 
 # The game starts here.
@@ -122,6 +122,7 @@ label start:
     o "It matters because it's about competence, and doing a good job, and doing it right the first time."
 
     hide alex_gritted_teeth
+    hide annabelle_annoyed
     show xander_grimace:
         xpos 0.25
     show annabelle_glower:
