@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 111: expecting name after dot.
-    xpos0.75
-          ^
+File "game/script.rpy", line 278: expected statement.
+    fade
+        ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Sat Sep 18 12:45:15 2021
+Sat Sep 18 21:38:12 2021
