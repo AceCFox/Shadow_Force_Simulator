@@ -255,6 +255,7 @@ screen quick_menu():
 
             textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
+            textbutton _("Bios") action ShowMenu('bios')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
@@ -306,6 +307,8 @@ screen navigation():
         else:
 
             textbutton _("History") action ShowMenu("history")
+
+            textbutton _("Bios") action ShowMenu('bios')
 
             textbutton _("Save") action ShowMenu("save")
 
@@ -962,6 +965,111 @@ style history_label:
 style history_label_text:
     xalign 0.5
 
+
+## bios screen #################################################################
+##
+## A screen that gives information about character bios. It uses other
+## screens (kam_bios, alex_bios, and annabelle_bios) to display the actual
+## bios.
+
+screen bios():
+
+    tag menu
+
+    default bio = "kam"
+
+    use game_menu(_("bios"), scroll="viewport"):
+
+        style_prefix "bios"
+
+        vbox:
+            spacing 15
+
+            hbox:
+
+                textbutton _("Kam") action SetScreenVariable("bio", "kam")
+                textbutton _("Alex") action SetScreenVariable("bio", "alex")
+                textbutton _("Annabelle") action SetScreenVariable("bio", "annabelle")
+
+            if bio == "kam":
+                use kam_bios
+            elif bio == "alex":
+                use alex_bios
+            elif bio == "annabelle":
+                use annabelle_bios
+
+
+screen kam_bios():
+
+    hbox:
+        label _("Super Villian Name")
+        text _("Confetti")
+
+    hbox:
+        label _("Age")
+        text _("???")
+
+    hbox:
+        label _("More Info")
+        text _("Something else")
+
+
+screen alex_bios():
+
+    hbox:
+        label _("Super Villian Name")
+        text _("Onyx")
+
+    hbox:
+        label _("Age")
+        text _("22")
+
+    hbox:
+        label _("Alises")
+        text _("""Alex Smith
+Alexandra Cain""")
+
+    hbox:
+        label _("Background")
+        text _("""(1) At this point, newspapers are starting to call Onyx the world’s greatest thief. No one knows their true identity—or even what they look like—because they’ve never been caught. The only evidence of their existence is the disappearance of fine art and rare jewels from museums and private collections, in each case replaced with a single, loose onyx stone. This seems like overdramatics, but nobody asked me. Most recently, Onyx participated in a daring raid on Basilisk Island for their own private reasons. They aren’t used to working in a group, so this was a learning experience.
+(2) Onyx’s true identity, of course, is Alex Smith (real original). She's 22 (probably), grumpy (definitely), and seems to be powered entirely by bad coffee (she should probably take a nap at some point). Of course, the question of whether ‘Alex Smith’ is actually her real name is still up for debate. She’s still not used to interacting with people, but it looks like she’s willing to give this new ‘team’ thing a shot. For now, anyway. Alex doesn’t talk much about where she comes from, but it’s easy to tell that she didn’t have a normal childhood. She knows how to kill, how to hide, and how to steal, and not much else. She’s also unfamiliar with some basic concepts like ‘birthdays’. It’s possible that she’s not actually hostile so much as she never learned to interact with people in a non-competitive way. She’s working on it, though. It seems like Kam is helping.
+(3) Alex was actually born Alexandria Cain, second daughter (of this generation) to Adrian Cain, an immortal sorcerer and supervillain. She was raised as a child assassin and pitted against her siblings in sometimes-violent, always-ruthless conflict. When she was fifteen, she asked for permission to leave. After her brother nearly killed her, her request was granted. For now, anyway. Alex still lives in terror of Adrian Cain, for understandable reasons. She’s always known that her father would keep her from having relationships with others— but with the team’s support, she’s willing to risk it.""")
+
+screen annabelle_bios():
+
+    hbox:
+        label _("Super Vilian Name")
+        text _("Shadow Master")
+
+    hbox:
+        label _("Age")
+        text _("???")
+
+    hbox:
+        label _("Background")
+        text _("Sass")
+
+style bios_button is gui_button
+style bios_button_text is gui_button_text
+style bios_label is gui_label
+style bios_label_text is gui_label_text
+style bios_text is gui_text
+
+style bios_button:
+    properties gui.button_properties("bios_button")
+    xmargin 8
+
+style bios_button_text:
+    properties gui.button_text_properties("bios_button")
+
+style bios_label:
+    xsize 250
+    right_padding 20
+
+style bios_label_text:
+    size gui.text_size
+    xalign 1.0
+    text_align 1.0
 
 ## Help screen #################################################################
 ##

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 278: expected statement.
-    fade
-        ^
+File "game/screens.rpy", line 1035: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+            text _("(2) Onyx’s true identity, of course, is Alex Smith (real original). She's 22 (probably), grumpy (definitely), and seems to be powered entirely by bad coffee (she should probably take a nap at some point). Of course, the question of whether ‘Alex Smith’ is actually her real name is still up for debate. She’s still not used to interacting with people, but it looks like she’s willing to give this new ‘team’ thing a shot. For now, anyway. Alex doesn’t talk much about where she comes from, but it’s easy to tell that she didn’t have a normal childhood. She knows how to kill, how to hide, and how to steal, and not much else. She’s also unfamiliar with some basic concepts like ‘birthdays’. It’s possible that she’s not actually hostile so much as she never learned to interact with people in a non-competitive way. She’s working on it, though. It seems like Kam is helping.)
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Sat Sep 18 21:38:12 2021
+Sat Sep 18 23:44:46 2021
