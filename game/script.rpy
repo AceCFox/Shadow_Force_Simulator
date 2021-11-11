@@ -3,12 +3,20 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define k = Character("Kam", who_bold=True)
+define k = Character("Kam" )
 define unknown = Character("???")
-define dr = Character ("Dr. Iliac", color="#4536a3", who_bold=True)
-define ol = Character ("Oliver", color = "#3e702f", who_bold=True)
-define o = Character ("Onyx", color = "#2b2b2a", who_bold=True)
-define s = Character ("Shadow Master", color = "#a64788", who_bold=True)
+
+define dr = Character ("Dr. Illiac", color="#004ea7")
+define udr = Character ("???", color="#004ea7")
+
+define ol = Character ("Oliver", color = "#3e702f")
+define uol = Character ("???", color = "#3e702f")
+
+define o = Character ("Onyx", color = "#000000")
+define uo = Character ("???", color = "#000000")
+
+define s = Character ("Shadow Master", color = "#a13869")
+
 
 
 # The game starts here.
@@ -32,16 +40,54 @@ label start:
 
     "I was surrounded by Supervillains"
 
+    layeredimage oliver:
+
+        always:
+
+            "Oliver.png"
+
+        group glasses:
+
+            attribute shine:
+                "Oliver-Glasses-WhiteGlo.png"
+
+            attribute glasses default:
+                "Oliver.Glasses.png"
+
+        group mouth:
+
+            attribute resting default:
+                "Oliver-Mouth-RestingSmirk.png"
+
+            attribute angry:
+                "Oliver.Mouth.Grumpy.png"
+
+        group eyes:
+
+            attribute resting default:
+                "Oliver.Eyes.Resting.png"
+
+        group eyebrows:
+
+            attribute resting default:
+                "Oliver.Eyebrows.Resting.png"
+
+            attribute angry:
+                "Oliver.Eyebrows.Angry.png"
+
+
+
+
     show xander_1:
         xalign 0.25
         #linear 0.3 xpos 0.95
-    show oliver_1:
-        xalign 0.75
+    show oliver resting glasses:
+        xalign 0.65
     with Pause(1)
 
     hide xander_1
     with dissolve
-    hide oliver_1
+    hide oliver
     with dissolve
 
     show alex_1:
@@ -61,20 +107,20 @@ label start:
     show dr_illiac_1:
         xalign 0.25
 
-    unknown "Well I guess we can call that a successful mission. Good work, team!"
+    udr "Well I guess we can call that a successful mission. Good work, team!"
 
     hide dr_illiac_1
-    show oliver_1:
+    show oliver resting glasses:
         xalign 0.75
 
-    unknown "Oh, yes, I would definitiely consider that successful. My favorite part was when you tinkered with that dimensional actuator or whatever and destroyed the entire island! Absolutely brilliant."
+    uol "Oh, yes, I would definitiely consider that successful. My favorite part was when you tinkered with that dimensional actuator or whatever and destroyed the entire island! Absolutely brilliant."
 
-    hide oliver_1
+    hide oliver
     show oliver_2:
         xalign 0.75
         linear 0.2 xpos 0.5
 
-    unknown "An especially auspicious debut for the return of the notorious {b}Dr. Iliac.{/b} Presumed dead by the world, only to mark those fools wrong with such glorious destruction. I can hardly think of a better comeback!"
+    uol "An especially auspicious debut for the return of the notorious {b}Dr. Illiac{/b} Presumed dead by the world, only to mark those fools wrong with such glorious destruction. I can hardly think of a better comeback!"
 
 
     hide oliver_2
@@ -94,13 +140,13 @@ label start:
     show alex_scowling:
         xpos 0.75
 
-    unknown "Messy? In case you forgot, this was supposed to be a {i}quiet{/i} mission. Get in, shut the place down, get out. What part of that do you think required turning into a giant monster and tearing everything to bits?"
+    uo "Messy? In case you forgot, this was supposed to be a {i}quiet{/i} mission. Get in, shut the place down, get out. What part of that do you think required turning into a giant monster and tearing everything to bits?"
 
     hide alex_scowling
     show oliver_grinning:
         xpos 0.25
 
-    ol "Ah. but {b}Onyx{/b}. What else was I supposed to do once they started shooting at us? While getting riddled with holes won't kill {i}me{/i}, it will kill this body, and that would be very unfortunate, yes? Besides I believe you were the one who was supposed to disable the defenses?"
+    ol "Ah. but {b}ONYX,{/b} what else was I supposed to do once they started shooting at us? While getting riddled with holes won't kill {i}me{/i}, it will kill this body, and that would be very unfortunate, yes? Besides I believe you were the one who was supposed to disable the defenses?"
 
     hide oliver_grinning
     with Pause(0.2)
@@ -113,7 +159,7 @@ label start:
 
     o "I disabled everything perfectly! Whatever went wrong happened when {b}Shadow Master{/b} used her-- "
 
-    s "Magic doesn't always play well with technology. Besides, who cares? I healed up Dr. Iliac's wounds, everyone's fine, we won. What's the big deal?"
+    s "Magic doesn't always play well with technology. Besides, who cares? I healed up Dr. Illiac's wounds, everyone's fine, we won. What's the big deal?"
 
     hide alex_shouting
     show alex_gritted_teeth:
@@ -134,7 +180,7 @@ label start:
     show oliver_shrug:
         xpos 0.2
 
-    ol "A success indeed. It could have used a bit more... panache, a bit more style. Hmm. Perhaps a bit more monologueing on your part, Dr. Iliac. I bet you'd be fantastic at it."
+    ol "A success indeed. It could have used a bit more... panache, a bit more style. Hmm. Perhaps a bit more monologueing on your part, Dr. Illiac. I bet you'd be fantastic at it."
 
     hide oliver_shrug
     hide annabelle_glower

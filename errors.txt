@@ -2,9 +2,22 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 6: invalid syntax
-    Character("Kam" who_bold=True)
-                            ^
+File "game/script.rpy", line 46: The always statement can only have one displayable, two found.
+(Perhaps you left out a " at the end of the first line.)
+    "Oliver.png
+    
+            group glasses:
+    
+                attribute shine:
+                    "Oliver-Glasses-WhiteGlo.png"
+    
+            group mouth:
+        ^
+    
+                pos (100, 100)
+    
+                attribute smile default:
+                    "Oliver-Mouth-RestingSmirk.png""
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Sun Sep 19 17:52:19 2021
+Tue Oct 12 20:28:04 2021
